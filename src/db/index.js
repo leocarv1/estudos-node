@@ -5,6 +5,8 @@ const User = require('../models/User');
 const Produto = require('../models/Produto');
 const Endereco = require('../models/Endereco');
 const Tech = require('../models/Tech');
+const Aluno = require("../models/Aluno");
+const Curso = require("../models/Curso");
 
 const connect = new Sequelize(dbConfig);
 
@@ -12,6 +14,7 @@ User.init(connect);
 Produto.init(connect);
 Endereco.init(connect);
 Tech.init(connect);
+Aluno.init(connect);
 
 Endereco.associate(connect.models);
 User.associate(connect.models);

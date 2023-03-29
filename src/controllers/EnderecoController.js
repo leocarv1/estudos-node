@@ -31,6 +31,4 @@ module.exports = {
 
         return res.json(endereco);
     },
-
-    
 }

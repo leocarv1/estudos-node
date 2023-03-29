@@ -6,8 +6,16 @@ const ProdutoController = require('../controllers/ProdutoController');
 const EnderecoController = require('../controllers/EnderecoController');
 const TechsController = require('../controllers/TechController');
 const RelatorioController = require('../controllers/RelatorioController');
+const AlunoController = require('../controllers/AlunoController');
 
 const route = express.Router()
+
+/** Alunos */
+route.get('/alunos', AlunoController.index);
+route.get('/alunos/:id', AlunoController.show);
+route.post('/alunos', AlunoController.store);
+route.post('/alunos/:id', AlunoController.update);
+route.delete('/alunos/:id', AlunoController.destroy);
 
 /** Produtos */
 route.post('/produtos', ProdutoController.store);
@@ -19,7 +27,10 @@ route.delete('/produtos/:id', ProdutoController.destroy);
 
 /** Users */
 route.get('/users', UserController.index);
+route.get('/users/:id', UserController.show);
+route.get('users/busca/:busca', UserController.busca);
 route.post('/users', UserController.store);
+route.delete('/users/:id', UserController.destroy);
 
 /** Endereços */
 route.get('/users/:user_id/enderecos', EnderecoController.index);
