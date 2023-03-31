@@ -20,6 +20,7 @@ Endereco.associate(connect.models);
 User.associate(connect.models);
 Tech.associate(connect.models);
 
+
 connect
   .authenticate()
   .then(() => {

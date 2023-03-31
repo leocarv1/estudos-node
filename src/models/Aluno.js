@@ -10,10 +10,8 @@ class Aluno extends Model {
         })
     }
 
-    // static associate(models) {
-    //     // Relação do aluno com o curso
-    //     this.hasOne(models.Aluno, { foreignKey: 'curso_id', as: 'cursos' });
-    // }
 }
+
+// Relações
 
 module.exports = Aluno
