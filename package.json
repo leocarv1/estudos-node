@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Primeiro projeto de 2022 do youtube",
   "main": "index.js",
+  "engines": {
+    "node": "18"
+  },
   "scripts": {
     "dev": "nodemon src/serve.js"
   },
